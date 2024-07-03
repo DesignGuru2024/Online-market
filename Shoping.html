@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> online market</title>
+  <link rel="stylesheet" href="shoping.css">
+</head>
+
+<body>
+  <header>
+        <div class="navbar">
+        <div class="logo">BrandLogo</div>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+    </div>
+        
+    </header>
+    <div class="search-container">
+        <span class="icon">🔍</span>
+        <input type="text" placeholder="Search products...">
+    </div>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkGfwyIWl0NQNZKgZ1vdwfSaJYdUyrkFNvCKokbUtOj0rrGDuCJg35GWYc&s=10" alt="Ad 1"></div>
+            <div class="slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ99UVDG17m61KvZ-a2MoUXQeM7sCfrVuxlw&usqp=CAU" alt="Ad 2"></div>
+            <div class="slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWZ3R4VL_6z8AKWUZvunYJ1VNqrstWBx1pYA&usqp=CAU" alt="Ad 3"></div>
+            <div class="slide"><img src="https://media.fashionnetwork.com/m/77a5/cb96/670e/89b6/5d14/c826/4bcd/77bf/ceb5/cb2d/cb2d.png" alt="Ad 4"></div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="category">
+            <button class="dropbtn"onclick="toggleDropdown()">CATEGORIES</button>
+            <div id="dropdown" class="dropdown-content">
+                <a href="https://www.bewakoof.com/p/men-lilac-bloom-plain-t-shirt?utm_source=google&utm_medium=cpc&ps_id=1111366&%24ios_passive_deepview=false&tag=t-shirt&gad_source=1&%243p=a_google_adwords&~advertising_partner_name=Google-Adwords&%24one_time_use=false&branch_ad_format=Cross-Platform-Search&~channel=google&~feature=paid%20advertising&~ad_set_id&~campaign_id=18177574534&~keyword&~placement&~gclid=Cj0KCQjw3tCyBhDBARIsAEY0XNlOOT_AXGVQLL7iZOAxjDEVaLPpVzky_CrFFnAxYHvCabhcD00yCGcaAgvBEALw_wcB&~lpurl=https%3A%2F%2Fwww.bewakoof.com%2Fp%2Fmen-lilac-bloom-plain-t-shirt%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26ps_id%3D1111366%26%24ios_passive_deepview%3Dfalse%26tag%3Dt-shirt%26gad_source%3D1&%24android_deepview=false&%24ios_deepview=false&%24desktop_deepview=false&%24android_passive_deepview=false&~campaign=PerfMax_Non_Essentials_30Aug22&utm_campaign=PerfMax_Non_Essentials_30Aug22&gclid=Cj0KCQjw3tCyBhDBARIsAEY0XNlOOT_AXGVQLL7iZOAxjDEVaLPpVzky_CrFFnAxYHvCabhcD00yCGcaAgvBEALw_wcB&_branch_match_id=1323664461997257444" onclick="showProducts('male')">Male</a>
+                <a href="https://www.nykaafashion.com/uptownie-lite-navy-blue-crepe-roll-up-jumpsuit/p/447427?adsource=shopping_india&skuId=13327059&utm_content=ads&utm_source=GooglePaid&utm_medium=PLA&utm_campaign=SSC_Catchall&gad_source=1&gclid=Cj0KCQjw3tCyBhDBARIsAEY0XNleHPKmI1DjQLu2wvt5PrttaoJvU11q3v9HdCetibexkv2F9MGq83gaAuVTEALw_wcB" onclick="showProducts('female')">Female</a>
+                <a href="https://www.firstcry.com/cucumber/cucumber-sinker-knit-half-sleeves-night-suit-animal-print-green/17410234/product-detail?ref=GoogleShopping_6_165!Standard-Cat_CH!&gad_source=1&gclid=Cj0KCQjw3tCyBhDBARIsAEY0XNl-g9iAeL4WVbab2NlTTKQKXq0yAGeJywSy2fWn9CLVgW806vuWHugaAvPiEALw_wcB" onclick="showProducts('kids')">Kids</a>
+            </div>
+        </div>
+
+        <div id="products" class="products">
+            <!-- Products will be displayed here -->
+        </div>
+    </div>
+    <br>
+    <div class="ourproduct">
+    <h1> OUR SUMMER PRODUCTS..</h1>
+       <h3>Best Summer collections for man</h3>
+       <div class="mancollection">
+       <p>Discover our exclusive range of men's summer clothing designed to keep you cool and stylish during the warm months. From casual shorts and t-shirts to sophisticated linen shirts and lightweight trousers, our collection has everything you need for a perfect summer wardrobe.</p>
+       </div>
+    </div>
+    <div class="containertwo">
+        <div class="boxo">
+            <img class="product-image" src="data:image/jpeg;base64,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" alt="Product 1">
+            <div class="product-details">
+                <h3>Product Name 1</h3>
+                <p>HAPIMO stripe print polo shirt </p>
+                <p>Price: $450</p>
+            </div>
+        </div>
+        <div class="boxo">
+            <img class="product-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_utvpi_PSc4Qpb_aEN4mIARHZdNgwMohbciVXWjCeng&s" alt="Product 2">
+            <div class="product-details">
+                <h3>Product Name 2</h3>
+                <p>new fashion polo .</p>
+                <p>Price: $XX.XX</p>
+            </div>
+        </div>
+        <div class="boxo">
+            <img class="product-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzmuhuJ0cjMMpAsrMF9WH-9G5KFrxZhqASp4GJiUv_9A&s" alt="Product 3">
+            <div class="product-details">
+                <h3>Product Name 3</h3>
+                <p>summer fashion brand polo shirt.</p>
+                <p>Price: $550</p>
+            </div>
+        </div>
+    </div>
+    
+    <h1>Best summer collections for woman</h1>
+    <div class="womans">
+      <p>Explore our chic and vibrant women's summer clothing collection, tailored to add a touch of elegance and comfort to your summer days. From breezy sundresses and tops to stylish skirts and swimwear, our range is perfect for any summer occasion.</p>
+            
+      
+    </div>
+    
+        <div class="containertwo">
+        <div class="boxo">
+            <img class="product-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuofwEycUlLxkMbvoilKtcAqYnn-Y6g5McGZd4K33vzoQKKMOqKzOtU-8&s=10" alt="Product 1">
+            <div class="product-details">
+                <h3>Product Name 1</h3>
+                <p>HAPIMO stripe print polo shirt </p>
+                <p>Price: $450</p>
+            </div>
+        </div>
+        <div class="boxo">
+            <img class="product-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoPt9TEZtfdyVOg1kDPUhn_JYQn-WYeNKzEXECTmmfSjlKZwJABrI1adY&s=10" alt="Product 2">
+            <div class="product-details">
+                <h3>Product Name 2</h3>
+                <p>new fashion polo .</p>
+                <p>Price: $XX.XX</p>
+            </div>
+        </div>
+        <div class="boxo">
+            <img class="product-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvX-_L44-MlcQAosKlinTE8W_D5jkIlQ_rNg&usqp=CAU">
+                <h3>Product Name 3</h3>
+                <p>summer fashion brand polo shirt.</p>
+                <p>Price: $550</p>
+            </div>
+        </div>
+    </div>
+    <div class="containerfour">
+    <div class="image-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoJHfzhRZt1KLSyvOwaCrsmoRIgQpPnjCj2-yIQX5GRylBU96sF11UGRw&s=10" alt="Your Image">
+    </div>
+    <div class="info-container">
+        <h2>SPECIAL EDITION</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at justo eu justo facilisis posuere.</p>
+        <button class="buy-button">Buy Now</button>
+    </div>
+</div>
+<div class="skincare">
+  <h1> skin care collections for man..</h1>
+  <p>Stay Cool, Stay Fresh: Your Summer Skincare Solution!</p>
+</div>
+        <div class="containercare">
+        <div class="boxii">
+            <img class="product-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQyqu_xR-JAL2oKw5j0f2tzMarAs3tbDKqo8PUogH-yixC-ZtPuBvGI_Q&s=10" alt="Product 1">
+            <div class="product-details">
+                <h3>The man company vitamin-C & niacinamide .</h3>
+                <p>Brand: The Man Company Buy The Man Company Vitamin C & Niacinamide Brightend Evens Tone Face Wash 100ml online at best price on Netmeds. </p>
+                <p>Price: $450</p>
+            </div>
+        </div>
+        <div class="boxii">
+            <img class="product-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnypFhNr4jsdIt5ilgu42eZEXsM2P3_acktEJr2_0PrzJCROsR0wd9yR5Y&s=10" alt="Product 2">
+            <div class="product-details">
+                <h3>Gabit skincare gamechanger kit..</h3>
+                <p>I am the Gabit Raidant & Clear Skin Kit, here to boost radiance, reduce dark spots and pigmentation from your face. 
+.</p>
+                <p>Price: $XX.XX</p>
+            </div>
+        </div>
+        <div class="boxii">
+            <img class="product-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwgCNrlUEFXTMyXvIJ-TN2Tx_YyApusNi9O5HHp7Sj6wuDHsUkBkdNsdg&s=10" alt='product 3'>
+                <h3>Beardo ultimate combo</h3>
+                <p>Brand: Beardo
+Includes: Hair Serum (50ml), Ultraglow Facewash (100ml), Beardo Mariner Captain Jack Perfume Body Spray (120ml).Ultraglow Bodywash (200ml),, Max ...
+</p>
+                <p>Price: $550</p>
+            </div>
+        </div>
+    </div>
+    <div class="poster">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZRIXEO_3OjG7IaF6_p6CUo9VhNZEb_J5zH5mMgcUcEBchx5h0xqtKeJuD&s=10" alt="Your Image">
+    </div>
+      
+    <div class="girlskincare">
+      <h1></h1>
+     <center><h4>Sun-Kissed and Glowing: Your Summer Skin Care Savior.</h4></center>
+    </div>
+    
+<div class="zoom">
+      <h1>something</h1>
+      <p> 
+
+"Welcome to our vibrant summer collection extravaganza! Dive into a world of sunshine and style as you explore our meticulously curated selection of summer essentials. From breezy dresses to chic swimwear, we've got everything you need to stay cool and fashionable under the sun. Indulge in a spectrum of colors, patterns, and textures that evoke the spirit of summer adventures. Whether you're lounging by the poolside or strolling along the beach, our collection offers something for every occasion. Embrace the season with confidence and flair, and let your wardrobe reflect the sunny vibes of summer. Experience the epitome of summertime elegance with our handpicked pieces that promise to elevate your style game effortlessly."</p>
+    </div>
+
+    
+
+
+  <div class="containerboom">
+<div class="itemz">
+            <div class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdLprgxCaV5taD3pDAXQr51m0wxVyn4CFDJeMnF2T_2aylm5I8kLANGCUo&s=10" alt="images"></div>
+            <div class="texti">
+              <h3>Victoria's Secret Pomegranate lotus body lotion </h3>
+              <p>Victoria's Secret Shop Victorias Secret Pomegranate Lotus Body Lotion 2 Pack 24 Hour Moisture Natural Beauty Balance 8 fl oz online at a best price in</p>
+            </div>
+        </div>
+        <div class="itemz">
+            <div class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgrkZpHhHG5GxPOTgMbjs-WmWm6rkfQxrIEU2bDX8dzjHqs2cnlwerPski&s=10" alt='image'>Image</div>
+            <div class="texti">
+              <h3></h3>
+              <p>The wedding season is in full swing, and it's time to say YES to tan-free radiant skin! Bring out your natural glow with the Wedding Glow Skincare .</p>
+            </div>
+        </div>
+        <div class="item horizontal">
+            <div class="image">Image</div>
+            <div class="texti">Heading or Information</div>
+        </div>
+    </div>
+
+
+    <script src="shoping.js"></script>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>We are a company dedicated to providing the best services to our customers.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+         
+           
+      
+
+
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@example.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Company. All rights reserved.</p>
+        </div>
+    </footer>
+    body>
+
+</html>
